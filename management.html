@@ -16,26 +16,20 @@
   .flow-step h4{font-size:16.5px; font-weight:700; color:var(--white); margin-bottom:8px;}
   .flow-step p{font-size:13.5px; color:var(--slate);}
 
-  .included-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:20px;}
-  .included-item{background:var(--white); border:1px solid var(--paper-dim); padding:26px; display:flex; gap:16px; align-items:flex-start;}
-  .included-item .ic{width:42px; height:42px; background:rgba(193,30,64,.1); border:1px solid var(--crimson); color:var(--crimson); display:flex; align-items:center; justify-content:center; flex-shrink:0;}
-  .included-item h4{font-size:16px; font-weight:700; margin-bottom:6px;}
-  .included-item p{font-size:14px; color:var(--slate-dark);}
-
-  .plans-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
-  .plan-card{background:var(--ink-soft); border:1px solid var(--ink-line); padding:34px 28px; display:flex; flex-direction:column;}
-  .plan-card.featured{border-color:var(--crimson); position:relative;}
-  .plan-card.featured::before{content:"الأكثر طلبًا"; position:absolute; top:-1px; right:-1px; background:var(--crimson); color:#fff; font-size:11.5px; font-family:'Cairo',sans-serif; font-weight:700; padding:5px 14px;}
-  .plan-card h4{font-size:18px; font-weight:700; color:var(--white); margin-bottom:10px;}
-  .plan-card p{font-size:14px; color:var(--slate); margin-bottom:20px; flex:1;}
-  .plan-card ul{display:flex; flex-direction:column; gap:10px; margin-bottom:24px;}
-  .plan-card li{font-size:13.5px; color:#d8d5cf; padding-right:16px; position:relative;}
-  .plan-card li::before{content:"✓"; position:absolute; right:0; color:var(--crimson); font-weight:700;}
+  .pricing-cards-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+  .pricing-mini-card{
+    background:var(--ink-soft); border:1px solid var(--ink-line); border-radius:10px;
+    padding:36px 30px; text-align:center; transition:border-color .25s, transform .25s;
+  }
+  .pricing-mini-card:hover{border-color:var(--crimson); transform:translateY(-4px);}
+  .pmc-icon{font-size:34px; margin-bottom:20px;}
+  .pricing-mini-card h4{font-size:18px; font-weight:700; color:var(--white); margin-bottom:12px;}
+  .pricing-mini-card p{font-size:14px; color:var(--slate); margin-bottom:22px; line-height:1.8;}
+  .pmc-price{font-family:'Cairo',sans-serif; font-weight:800; font-size:18px; color:var(--crimson);}
 
   @media (max-width: 980px){
     .flow-grid{grid-template-columns:repeat(2,1fr);}
-    .included-grid{grid-template-columns:1fr;}
-    .plans-grid{grid-template-columns:1fr;}
+    .pricing-cards-grid{grid-template-columns:1fr;}
   }
 </style>
 </head>
@@ -77,32 +71,26 @@
 
 <section class="on-light">
   <div class="container">
-    <div class="eyebrow"><span>إيه اللي بنعمله</span></div>
-    <div class="section-head"><h2>خدمة متكاملة لصفحاتك</h2><p>مش بس بوستات — إدارة حقيقية بتبني علاقة بينك وبين عملائك.</p></div>
-    <div class="included-grid">
-      <div class="included-item reveal">
-        <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div>
-        <div><h4>تصميم محتوى شهري</h4><p>خطة محتوى وتصميمات جرافيك مصممة خصيصًا لهوية علامتك.</p></div>
+    <div class="eyebrow"><span>ماذا يشمل</span></div>
+    <div class="section-head"><h2>خدمة متكاملة لصفحاتك</h2><p>نتولى كل شيء من الاستراتيجية إلى التنفيذ — مصمم خصيصًا لمشروعك.</p></div>
+    <div class="pricing-cards-grid">
+      <div class="pricing-mini-card reveal">
+        <div class="pmc-icon">⚙️</div>
+        <h4>إدارة كاملة للحسابات</h4>
+        <p>إدارة شاملة عبر كل المنصات — مع تقارير شهرية وتتبع بيكسل وتحسين التحويلات.</p>
+        <div class="pmc-price">يبدأ من 10,000 جنيه</div>
       </div>
-      <div class="included-item reveal">
-        <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
-        <div><h4>جدولة ونشر يومي</h4><p>نشر منظم بتوقيتات مدروسة لأعلى تفاعل ممكن.</p></div>
+      <div class="pricing-mini-card reveal">
+        <div class="pmc-icon">🔍</div>
+        <h4>إدارة إعلانات جوجل</h4>
+        <p>حملات بحث وعرض ويوتيوب لمساعدة عملائك المستهدفين في إيجاد نشاطك بالظبط وقت احتياجهم له.</p>
+        <div class="pmc-price">يبدأ من 10,000 جنيه</div>
       </div>
-      <div class="included-item reveal">
-        <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.4 8.4 0 01-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></div>
-        <div><h4>الرد على الرسائل والتعليقات</h4><p>تفاعل حقيقي مع جمهورك بيحافظ على سمعة علامتك.</p></div>
-      </div>
-      <div class="included-item reveal">
-        <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z"/></svg></div>
-        <div><h4>إدارة الإعلانات الممولة</h4><p>حملات إعلانية مدروسة بميزانية محسوبة ونتائج قابلة للقياس.</p></div>
-      </div>
-      <div class="included-item reveal">
-        <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3v18h18"/><path d="M7 15l4-6 3 4 5-7"/></svg></div>
-        <div><h4>تقارير أداء شهرية</h4><p>تقرير واضح بالأرقام: وصول، تفاعل، وتكلفة كل عميل محتمل.</p></div>
-      </div>
-      <div class="included-item reveal">
-        <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div>
-        <div><h4>تصوير وفيديو</h4><p>محتوى فيديو وتصوير احترافي لمنتجاتك أو خدماتك عند الحاجة.</p></div>
+      <div class="pricing-mini-card reveal">
+        <div class="pmc-icon">📱</div>
+        <h4>إعلانات السوشيال ميديا</h4>
+        <p>إدارة كاملة لحملات ميتا وتيك توك وسناب شات تستهدف العملاء المناسبين بالرسالة المناسبة.</p>
+        <div class="pmc-price">يبدأ من 10,000 جنيه</div>
       </div>
     </div>
   </div>
@@ -118,50 +106,6 @@
       <div class="flow-step reveal"><div class="num">02</div><h4>خطة محتوى مخصصة</h4><p>بنحط خطة شهرية مبنية على أهدافك الفعلية.</p></div>
       <div class="flow-step reveal"><div class="num">03</div><h4>تنفيذ ونشر</h4><p>تصميم، كتابة، ونشر منظم بجودة ثابتة كل شهر.</p></div>
       <div class="flow-step reveal"><div class="num">04</div><h4>قياس وتطوير</h4><p>تقرير شهري وتعديل الخطة بناءً على النتائج الفعلية.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="on-light" style="background:var(--paper-dim);">
-  <div class="container">
-    <div class="eyebrow"><span>باقاتنا</span></div>
-    <div class="section-head"><h2>اختار الباقة المناسبة لمشروعك</h2><p>الأسعار بتتحدد حسب حجم النشاط وعدد المنصات — تواصل معانا لعرض سعر مخصص.</p></div>
-    <div class="plans-grid">
-      <div class="plan-card reveal">
-        <h4>باقة البداية</h4>
-        <p>مناسبة للمشاريع الصغيرة والناشئة اللي بتبدأ حضورها الرقمي.</p>
-        <ul>
-          <li>منصة واحدة (فيسبوك أو انستجرام)</li>
-          <li>8 تصميمات شهريًا</li>
-          <li>رد على الرسائل والتعليقات</li>
-          <li>تقرير أداء شهري</li>
-        </ul>
-        <a href="https://wa.me/201095586007?text=عايز%20أعرف%20سعر%20باقة%20البداية" target="_blank" class="btn btn-outline-light">اطلب عرض سعر</a>
-      </div>
-      <div class="plan-card featured reveal">
-        <h4>باقة النمو</h4>
-        <p>الأنسب للشركات اللي عايزة تزود عملائها بشكل ملحوظ.</p>
-        <ul>
-          <li>منصتين (فيسبوك + انستجرام)</li>
-          <li>16 تصميم شهريًا</li>
-          <li>إدارة إعلانات ممولة</li>
-          <li>تقارير أداء أسبوعية</li>
-          <li>محتوى فيديو شهري</li>
-        </ul>
-        <a href="https://wa.me/201095586007?text=عايز%20أعرف%20سعر%20باقة%20النمو" target="_blank" class="btn btn-primary">اطلب عرض سعر</a>
-      </div>
-      <div class="plan-card reveal">
-        <h4>باقة الاحتراف</h4>
-        <p>للعلامات الكبيرة اللي محتاجة حضور قوي على كل المنصات.</p>
-        <ul>
-          <li>كل المنصات (فيسبوك، انستجرام، تيك توك)</li>
-          <li>محتوى غير محدود</li>
-          <li>إدارة كاملة للإعلانات الممولة + جوجل أدز</li>
-          <li>مدير حساب مخصص</li>
-          <li>تقارير مفصلة أسبوعية</li>
-        </ul>
-        <a href="https://wa.me/201095586007?text=عايز%20أعرف%20سعر%20باقة%20الاحتراف" target="_blank" class="btn btn-outline-light">اطلب عرض سعر</a>
-      </div>
     </div>
   </div>
 </section>
