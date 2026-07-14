@@ -16,16 +16,23 @@
   .flow-step h4{font-size:16.5px; font-weight:700; color:var(--white); margin-bottom:8px;}
   .flow-step p{font-size:13.5px; color:var(--slate);}
 
-  .pricing-cards-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
-  .pricing-mini-card{
+  .pricing-single-card{
     background:var(--ink-soft); border:1px solid var(--ink-line); border-radius:10px;
-    padding:36px 30px; text-align:center; transition:border-color .25s, transform .25s;
+    padding:10px 34px;
   }
-  .pricing-mini-card:hover{border-color:var(--crimson); transform:translateY(-4px);}
-  .pmc-icon{font-size:34px; margin-bottom:20px;}
-  .pricing-mini-card h4{font-size:18px; font-weight:700; color:var(--white); margin-bottom:12px;}
-  .pricing-mini-card p{font-size:14px; color:var(--slate); margin-bottom:22px; line-height:1.8;}
-  .pmc-price{font-family:'Cairo',sans-serif; font-weight:800; font-size:18px; color:var(--crimson);}
+  .psc-row{
+    display:flex; flex-direction:column; gap:14px; padding:32px 0; border-bottom:1px solid var(--ink-line);
+  }
+  .psc-row:last-child{border-bottom:none;}
+  .psc-head{display:flex; align-items:center; gap:16px;}
+  .psc-row .pmc-icon{font-size:32px; flex-shrink:0;}
+  .psc-text{flex:1;}
+  .psc-text h4{font-size:19px; font-weight:700; color:var(--white); margin-bottom:10px;}
+  .psc-text p{font-size:15px; color:var(--slate); line-height:1.9;}
+  .psc-final-price{
+    text-align:center; margin:30px 0 10px; padding-top:30px; border-top:2px solid var(--crimson);
+    font-family:'Cairo',sans-serif; font-weight:900; font-size:24px; color:var(--white);
+  }
 
   @media (max-width: 980px){
     .flow-grid{grid-template-columns:repeat(2,1fr);}
@@ -73,25 +80,29 @@
   <div class="container">
     <div class="eyebrow"><span>ماذا يشمل</span></div>
     <div class="section-head"><h2>خدمة متكاملة لصفحاتك</h2><p>نتولى كل شيء من الاستراتيجية إلى التنفيذ — مصمم خصيصًا لمشروعك.</p></div>
-    <div class="pricing-cards-grid">
-      <div class="pricing-mini-card reveal">
-        <div class="pmc-icon">⚙️</div>
-        <h4>إدارة كاملة للحسابات</h4>
-        <p>إدارة شاملة عبر كل المنصات — مع تقارير شهرية وتتبع بيكسل وتحسين التحويلات.</p>
-        <div class="pmc-price">يبدأ من 10,000 جنيه</div>
+    <div class="pricing-single-card reveal">
+      <div class="psc-row">
+        <div class="psc-head">
+          <div class="pmc-icon">⚙️</div>
+          <div class="psc-text"><h4>إدارة كاملة للحسابات</h4></div>
+        </div>
+        <p style="color:var(--slate); font-size:15px; line-height:1.9;">إدارة شاملة لصفحاتك عبر كل المنصات (فيسبوك، إنستجرام، تيك توك) بدايةً من خطة المحتوى الشهرية، مرورًا بالتصميم والكتابة والنشر بتوقيتات مدروسة، وصولًا لمتابعة يومية للتفاعل والرسائل. بنسلّمك تقرير أداء شهري واضح بالأرقام (وصول، تفاعل، نمو المتابعين) عشان تبقى شايف نتيجة فلوسك بوضوح.</p>
       </div>
-      <div class="pricing-mini-card reveal">
-        <div class="pmc-icon">🔍</div>
-        <h4>إدارة إعلانات جوجل</h4>
-        <p>حملات بحث وعرض ويوتيوب لمساعدة عملائك المستهدفين في إيجاد نشاطك بالظبط وقت احتياجهم له.</p>
-        <div class="pmc-price">يبدأ من 10,000 جنيه</div>
+      <div class="psc-row">
+        <div class="psc-head">
+          <div class="pmc-icon">🔍</div>
+          <div class="psc-text"><h4>إدارة إعلانات جوجل</h4></div>
+        </div>
+        <p style="color:var(--slate); font-size:15px; line-height:1.9;">حملات بحث (Search)، عرض (Display)، ويوتيوب مصممة عشان تظهرك لأي حد بيدور على منتجك أو خدمتك بالظبط وقت احتياجه ليك. بنحدد الكلمات المفتاحية الصح، نبني الإعلان، نراقب الأداء يوميًا، ونعدّل الاستهداف والميزانية باستمرار عشان أقل تكلفة لكل عميل محتمل وأعلى عائد ممكن على الإنفاق الإعلاني.</p>
       </div>
-      <div class="pricing-mini-card reveal">
-        <div class="pmc-icon">📱</div>
-        <h4>إعلانات السوشيال ميديا</h4>
-        <p>إدارة كاملة لحملات ميتا وتيك توك وسناب شات تستهدف العملاء المناسبين بالرسالة المناسبة.</p>
-        <div class="pmc-price">يبدأ من 10,000 جنيه</div>
+      <div class="psc-row" style="border-bottom:none;">
+        <div class="psc-head">
+          <div class="pmc-icon">📱</div>
+          <div class="psc-text"><h4>إعلانات السوشيال ميديا</h4></div>
+        </div>
+        <p style="color:var(--slate); font-size:15px; line-height:1.9;">إدارة كاملة لحملاتك الإعلانية على ميتا (فيسبوك وإنستجرام)، تيك توك، وسناب شات. بنبني الاستهداف على أساس عمر وجنس واهتمامات جمهورك الحقيقي، بنجرب أكتر من إعلان في نفس الوقت (A/B Testing)، وبنحلل النتائج أسبوعيًا عشان نوقف اللي مش بيجيب نتيجة ونزود الميزانية على اللي بيحقق أفضل عائد.</p>
       </div>
+      <div class="psc-final-price">يبدأ من 10,000 جنيه</div>
     </div>
   </div>
 </section>
