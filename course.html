@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>كورس التسويق الإلكتروني | Job Market Academy</title>
-<meta name="description" content="كورس التسويق الإلكتروني العام من Job Market Academy - كورس عملي شامل، مدة شهرين، حضوري أو أونلاين، بسعر 3000 جنيه.">
+<meta name="description" content="كورس التسويق الإلكتروني العام من Job Market Academy - كورس عملي شامل، 8 محاضرات، حضوري أو أونلاين، بسعر 3000 جنيه.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -38,10 +38,12 @@
   .perk h4{font-size:15px; font-weight:700; margin-bottom:4px;}
   .perk p{font-size:13.5px; color:var(--slate-dark);}
 
-  .instructor-box{background:var(--ink); color:var(--white); border:1px solid var(--ink-line); padding:32px; display:flex; gap:22px; align-items:center; margin-top:16px;}
+  .instructor-box{background:var(--ink); color:var(--white); border:1px solid var(--ink-line); padding:24px; display:flex; gap:22px; align-items:center; margin-top:16px;}
+  .instructor-box img{width:220px; flex-shrink:0; border:1px solid var(--ink-line);}
   .instructor-box .initial{width:64px; height:64px; border-radius:50%; background:var(--crimson); display:flex; align-items:center; justify-content:center; font-family:'Cairo',sans-serif; font-weight:800; font-size:24px; flex-shrink:0;}
   .instructor-box h4{font-size:18px; font-weight:700; margin-bottom:4px;}
   .instructor-box p{font-size:14px; color:var(--slate);}
+  @media (max-width: 640px){ .instructor-box{flex-direction:column; text-align:center;} .instructor-box img{width:100%; max-width:280px;} }
 
   @media (max-width: 980px){
     .course-layout{grid-template-columns:1fr;}
@@ -117,20 +119,20 @@
           </div>
           <div class="perk reveal">
             <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
-            <div><h4>مدة المحاضرة 4 ساعات</h4><p>محاضرات مكثفة وعملية على مدار شهرين كاملين.</p></div>
+            <div><h4>مدة المحاضرة 3 ساعات</h4><p>8 محاضرات مكثفة وعملية بمحتوى تطبيقي بالكامل.</p></div>
           </div>
           <div class="perk reveal">
-            <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg></div>
-            <div><h4>ضمان استرداد الكورس</h4><p>يمكن استرداد قيمة الكورس بالكامل بعد الانتهاء منه.</p></div>
+            <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
+            <div><h4>8 محاضرات كاملة</h4><p>خطة تدريبية متكاملة من الأساسيات لحد التنفيذ الفعلي للحملات.</p></div>
           </div>
         </div>
 
         <div class="eyebrow" style="margin-top:60px;"><span>مين هيقدم الكورس</span></div>
         <div class="instructor-box reveal">
-          <div class="initial">ح</div>
+          <img src="assets/promo-duo.jpg" alt="بشمهندس عبدالرحمن بجت وبشمهندس معاذ سيد">
           <div>
-            <h4>م. حسين ذكي</h4>
-            <p>مؤسس Job Market Academy، مهندس اتصالات بخبرة تزيد عن 12 سنة في التسويق الإلكتروني، ومدرب معتمد لأكتر من 12 سنة.</p>
+            <h4>م. عبدالرحمن بجت & م. معاذ سيد</h4>
+            <p>مدير عام قسم التسويق الإلكتروني بخبرة +10 سنين، وتيم ليدر التسويق الإلكتروني بخبرة +6 سنين. الاتنين بيقدموا كورس التسويق الإلكتروني العام بمحتوى عملي وخبرة ميدانية حقيقية.</p>
           </div>
         </div>
       </div>
@@ -138,16 +140,16 @@
       <aside class="course-card-side reveal">
         <span style="font-size:13px; color:var(--slate); letter-spacing:.5px;">سعر الكورس</span>
         <div class="price-tag">3000 <span style="font-size:20px;">EGP</span></div>
-        <div class="price-note">شامل التسجيلات + الضمان</div>
+        <div class="price-note">شامل تسجيلات كل المحاضرات</div>
 
         <div class="course-facts">
           <div class="fact">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
-            مدة الكورس: شهرين
+            مدة الكورس: 8 محاضرات
           </div>
           <div class="fact">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
-            محاضرة 4 ساعات
+            محاضرة 3 ساعات
           </div>
           <div class="fact">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3"/></svg>
@@ -163,15 +165,6 @@
         <p style="text-align:center; font-size:12.5px; color:var(--slate); margin-top:14px;">أو اتصل على 01095586007</p>
       </aside>
     </div>
-  </div>
-</section>
-
-<section class="on-dark" style="padding:70px 0;">
-  <div class="container" style="text-align:center;">
-    <div class="eyebrow" style="justify-content:center;"><span>كورس تاني عندنا</span></div>
-    <h2 style="font-size:clamp(24px,3.2vw,32px); font-weight:800; margin-bottom:14px;">محتاج تسويق متخصص للمجال الطبي؟</h2>
-    <p style="color:#c7c3bb; max-width:560px; margin:0 auto 24px;">عندنا كورس Medical Marketing متخصص لأصحاب التخصصات الطبية بسعر 5000 جنيه، بإشراف د. حسين ذكي بخبرة +13 سنة في المجال الطبي.</p>
-    <a href="https://wa.me/201095586007?text=عايز%20أعرف%20تفاصيل%20كورس%20Medical%20Marketing" target="_blank" class="btn btn-outline-dark">اسأل عن كورس Medical Marketing</a>
   </div>
 </section>
 
