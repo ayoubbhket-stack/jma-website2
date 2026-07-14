@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تواصل معنا | Job Market Academy</title>
+<meta name="description" content="تواصل مع Job Market Academy - وكالة تسويق إلكتروني وتصميم جرافيك. اتصل بينا أو ابعتلنا رسالة وهنرد عليك بأقرب وقت.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  .contact-grid{display:grid; grid-template-columns:.9fr 1.1fr; gap:60px;}
+  .contact-info-item{display:flex; gap:16px; margin-bottom:28px; align-items:flex-start;}
+  .contact-info-item .ic{width:42px; height:42px; background:rgba(193,30,64,.12); border:1px solid var(--crimson); display:flex; align-items:center; justify-content:center; flex-shrink:0; color:var(--crimson);}
+  .contact-info-item h4{font-size:15px; font-weight:700; margin-bottom:4px;}
+  .contact-info-item p, .contact-info-item a{font-size:14.5px; color:var(--slate-dark);}
+  .on-dark .contact-info-item p, .on-dark .contact-info-item a{color:#c7c3bb;}
+
+  .contact-form{background:var(--ink-soft); border:1px solid var(--ink-line); padding:40px;}
+  .form-row{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-bottom:18px;}
+  .field{display:flex; flex-direction:column; gap:8px;}
+  .field.full{grid-column:1/-1;}
+  .field label{font-size:13px; color:var(--slate); font-weight:500;}
+  .field input, .field textarea, .field select{
+    background:var(--ink); border:1px solid var(--ink-line); padding:13px 14px; color:var(--white);
+    font-family:'Tajawal',sans-serif; font-size:14.5px; border-radius:2px;
+  }
+  .field input:focus, .field textarea:focus, .field select:focus{outline:none; border-color:var(--crimson);}
+  .field textarea{resize:vertical; min-height:100px;}
+
+  .map-wrap{margin-top:60px; border:1px solid var(--paper-dim); height:360px; overflow:hidden;}
+  .map-wrap iframe{width:100%; height:100%; border:0; filter:grayscale(30%);}
+
+  @media (max-width: 980px){
+    .contact-grid{grid-template-columns:1fr;}
+    .form-row{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-wrap">
+    <div class="brand"><a href="index.html"><img src="assets/logo.jpg" alt="Job Market Academy"></a></div>
+    <nav class="links">
+      <a href="index.html">الرئيسية</a>
+      <a href="course.html">الكورس</a>
+      <a href="management.html">إدارة الصفحات</a>
+      <a href="contact.html" class="active">تواصل معنا</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="https://wa.me/201095586007" target="_blank" class="btn btn-primary">واتساب مباشر</a>
+      <button class="burger" id="burgerBtn" aria-label="فتح القائمة"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="overlay" id="overlay"></div>
+<div class="mobile-nav" id="mobileNav">
+  <button class="mobile-nav-close" id="closeNav">✕</button>
+  <a href="index.html">الرئيسية</a>
+  <a href="course.html">الكورس</a>
+  <a href="management.html">إدارة الصفحات</a>
+  <a href="contact.html">تواصل معنا</a>
+</div>
+
+<section class="page-hero">
+  <div class="watermark">تواصل</div>
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">الرئيسية</a> / تواصل معنا</div>
+    <h1>يلا نبدأ مشروعك</h1>
+    <p class="lead">سواء عايز تحجز في الكورس، تطلب عرض سعر لإدارة صفحاتك، أو مجرد عندك سؤال — فريقنا هيرجعلك بأقرب وقت.</p>
+  </div>
+</section>
+
+<section class="on-dark">
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <div class="eyebrow"><span>بيانات التواصل</span></div>
+        <div class="contact-info-item reveal">
+          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .3 2 .7 2.9a2 2 0 01-.4 2.1L8.1 10a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.4 1.9.6 2.9.7a2 2 0 011.6 2z"/></svg></div>
+          <div><h4>اتصل بينا</h4><a href="tel:+201095586007">01095586007</a></div>
+        </div>
+        <div class="contact-info-item reveal">
+          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.4 8.4 0 01-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></div>
+          <div><h4>واتساب</h4><a href="https://wa.me/201095586007" target="_blank">تواصل مباشر عبر واتساب</a></div>
+        </div>
+        <div class="contact-info-item reveal">
+          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><h4>العنوان</h4><p>مول السراج، عطية الصوالحي، المنطقة الثامنة<br>مبنى 3، مدخل 6، الدور 10</p></div>
+        </div>
+        <div class="contact-info-item reveal">
+          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+          <div><h4>مواعيد العمل</h4><p>السبت – الخميس: 10 صباحًا – 8 مساءً</p></div>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <div class="form-row">
+          <div class="field"><label>الاسم</label><input type="text" placeholder="اسمك بالكامل"></div>
+          <div class="field"><label>رقم الهاتف</label><input type="text" placeholder="01xxxxxxxxx"></div>
+        </div>
+        <div class="field full" style="margin-bottom:18px;">
+          <label>محتاج مساعدة في إيه؟</label>
+          <select>
+            <option>كورس التسويق الإلكتروني العام</option>
+            <option>كورس Medical Marketing</option>
+            <option>إدارة صفحات السوشيال ميديا</option>
+            <option>خدمة تانية</option>
+          </select>
+        </div>
+        <div class="field full" style="margin-bottom:24px;">
+          <label>تفاصيل إضافية</label>
+          <textarea placeholder="اكتب رسالتك هنا..."></textarea>
+        </div>
+        <button type="button" class="btn btn-primary btn-block" onclick="window.open('https://wa.me/201095586007','_blank')">إرسال عبر واتساب</button>
+      </div>
+    </div>
+
+    <div class="map-wrap reveal">
+      <iframe src="https://www.google.com/maps?q=El+Serag+Mall+10th+of+Ramadan&output=embed" loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand"><img src="assets/logo.jpg" alt="Job Market Academy"></div>
+      <div class="footer-links">
+        <div class="footer-col"><h5>روابط سريعة</h5><ul><li><a href="index.html">الرئيسية</a></li><li><a href="course.html">الكورس</a></li><li><a href="management.html">إدارة الصفحات</a></li><li><a href="contact.html">تواصل معنا</a></li></ul></div>
+        <div class="footer-col"><h5>تواصل</h5><ul><li><a href="tel:+201095586007">01095586007</a></li><li><a href="https://wa.me/201095586007" target="_blank">واتساب</a></li></ul></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Job Market Academy — جميع الحقوق محفوظة</p>
+      <div class="socials">
+        <a href="#" aria-label="فيسبوك"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M14 13.5h2.5l1-4H14v-2c0-1 .3-2 2-2h1.6V2.2C17.3 2.1 16 2 14.6 2 11.7 2 10 3.7 10 7v2.5H7v4h3V22h4v-8.5z"/></svg></a>
+        <a href="#" aria-label="انستجرام"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/201095586007" target="_blank" class="float-wa" aria-label="واتساب">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="#fff"><path d="M12.04 2a9.9 9.9 0 00-8.5 15L2 22l5.2-1.4a9.9 9.9 0 004.8 1.2h.02a10 10 0 000-20zm5.8 14.2c-.24.68-1.4 1.3-1.94 1.38-.5.08-1.13.11-1.82-.12a15 15 0 01-1.85-.68 12.4 12.4 0 01-4.5-3.98c-.5-.68-1.03-1.5-1.15-2.4-.1-.83.14-1.55.6-2.06a1 1 0 01.72-.34h.5c.16 0 .38-.03.58.44.24.55.8 1.9.87 2.05.08.14.13.32.02.5-.1.2-.16.3-.3.47-.15.16-.3.36-.44.48-.14.14-.3.3-.13.58.16.28.72 1.2 1.56 1.94 1.07.96 1.97 1.26 2.26 1.4.28.14.45.12.62-.07.16-.2.7-.8.88-1.08.18-.28.36-.23.6-.14.24.1 1.55.73 1.82.86.26.13.44.2.5.3.06.13.06.72-.18 1.4z"/></svg>
+</a>
+
+<script src="assets/main.js"></script>
+</body>
+</html>
