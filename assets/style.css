@@ -124,3 +124,8 @@ footer{background:var(--ink); border-top:1px solid var(--ink-line); padding:50px
   .page-hero{padding-top:140px;}
   .footer-top{flex-direction:column;}
 }
+.float-actions{position:fixed; bottom:24px; right:24px; display:flex; flex-direction:column; gap:14px; z-index:999;}
+.float-btn{width:56px; height:56px; border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 6px 20px rgba(0,0,0,.3); transition:transform .2s;}
+.float-btn:hover{transform:scale(1.08);}
+.call-btn{background:var(--crimson);}
+.wa-btn{background:#25D366;}
