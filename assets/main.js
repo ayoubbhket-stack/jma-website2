@@ -3,7 +3,7 @@ const burger = document.getElementById('burgerBtn'); const mobileNav = document.
 
 
 
-document.querySelectorAll('nav.links, .mobile-nav').forEach((nav) => { if (nav.querySelector('a[href="websites"]')) return; const link = document.createElement('a'); link.href = 'websites'; link.textContent = 'مواقعنا'; const before = nav.querySelector('a[href="contact"]'); nav.insertBefore(link, before || null); });
+document.querySelectorAll('nav.links, .mobile-nav').forEach((nav) => { if (nav.querySelector('a[href="websites"]')) return; const link = document.createElement('a'); link.href = 'websites'; link.textContent = 'سابقة أعمالنا'; const before = nav.querySelector('a[href="contact"]'); nav.insertBefore(link, before || null); });
 
 
 
