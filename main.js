@@ -1,0 +1,20 @@
+const burger = document.getElementById('burgerBtn'); const mobileNav = document.getElementById('mobileNav'); const closeNav = document.getElementById('closeNav'); const overlay = document.getElementById('overlay'); function openNav(){ mobileNav.classList.add('open'); overlay.classList.add('show'); } function closeNavFn(){ mobileNav.classList.remove('open'); overlay.classList.remove('show'); } if(burger){ burger.addEventListener('click', openNav); closeNav.addEventListener('click', closeNavFn); overlay.addEventListener('click', closeNavFn); document.querySelectorAll('.mobile-nav a').forEach(a => a.addEventListener('click', closeNavFn)); } const io = new IntersectionObserver((entries)=>{ entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, {threshold:.15}); document.querySelectorAll('.reveal').forEach(el=>io.observe(el)); const header = document.querySelector('header'); if(header){ window.addEventListener('scroll', ()=>{ if(window.scrollY > 40){ header.style.background = 'rgba(11,11,13,.98)'; } else{ header.style.background = 'rgba(11,11,13,.92)'; } }); }
+
+
+
+
+document.querySelectorAll('nav.links, .mobile-nav').forEach((nav) => { if (nav.querySelector('a[href="websites"]')) return; const link = document.createElement('a'); link.href = 'websites'; link.textContent = 'سابقة أعمالنا'; const before = nav.querySelector('a[href="contact"]'); nav.insertBefore(link, before || null); });
+
+
+
+
+const motionStyle = document.createElement('style');
+motionStyle.textContent = `body.motion-ready #hero > .container,body.motion-ready .section-head,body.motion-ready .eyebrow,body.motion-ready .about-copy,body.motion-ready .pillars,body.motion-ready .course-mini,body.motion-ready .case-card,body.motion-ready .team-photos-row,body.motion-ready .testi-img-grid,body.motion-ready .cta-band .container{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}body.motion-ready .motion-visible{opacity:1;transform:none}body.motion-ready #hero > .container.motion-visible{opacity:1;transform:none}body.motion-ready #hero>.container{transition-delay:.12s}body.motion-ready .service-card,body.motion-ready .case-card,body.motion-ready .client-chip,body.motion-ready .testi-img-grid img{transition:transform .32s ease,box-shadow .32s ease,border-color .32s ease}body.motion-ready .service-card:hover,body.motion-ready .case-card:hover,body.motion-ready .client-chip:hover{transform:translateY(-6px)}body.motion-ready .testi-img-grid img:hover{transform:translateY(-5px) scale(1.015)}@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}`;
+document.head.appendChild(motionStyle);
+document.body.classList.add('motion-ready');
+const motionTargets=document.querySelectorAll('#hero > .container,.section-head,.eyebrow,.about-copy,.pillars,.course-mini,.case-card,.team-photos-row,.testi-img-grid,.cta-band .container');
+const motionObserver=new IntersectionObserver((entries,observer)=>{entries.forEach(({isIntersecting,target})=>{if(!isIntersecting)return;target.classList.add('motion-visible');observer.unobserve(target)})},{threshold:.15,rootMargin:'0px 0px -45px'});
+motionTargets.forEach(target=>motionObserver.observe(target));
+
+
+
