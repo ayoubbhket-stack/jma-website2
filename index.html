@@ -3500,4 +3500,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 </script>
 
-<!-- JMA-PRO-MOTION-JS-END --></body></html>
+<!-- JMA-PRO-MOTION-JS-END --><script>/* JMA tracking: pushes events to Google Tag Manager */
+window.dataLayer=window.dataLayer||[];
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.getAttribute('href')||'';
+if(h.indexOf('wa.me')>-1){dataLayer.push({event:'whatsapp_click',link_location:location.pathname});}
+else if(h.indexOf('tel:')===0){dataLayer.push({event:'phone_click',link_location:location.pathname});}});
+function jmaSendForm(){var g=function(i){var el=document.getElementById(i);return el?el.value.trim():'';};
+var n=g('jf-name'),p=g('jf-phone').replace(/[^0-9+]/g,''),sv=g('jf-service'),m=g('jf-msg'),err=document.getElementById('jf-err');
+if(n.length<2){err.textContent='من فضلك اكتب اسمك';return;}
+if(!/^(\+?20|0)?1[0125][0-9]{8}$/.test(p)){err.textContent='من فضلك اكتب رقم موبايل صحيح';return;}
+err.textContent='';
+dataLayer.push({event:'generate_lead',form_name:'contact',service:sv});
+var t='الاسم: '+n+'\nالرقم: '+p+'\nمحتاج: '+sv+(m?'\nتفاصيل: '+m:'');
+window.open('https://wa.me/201119916229?text='+encodeURIComponent(t),'_blank');}
+</script></body></html>
