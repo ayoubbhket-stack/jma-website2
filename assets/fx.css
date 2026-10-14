@@ -1,0 +1,40 @@
+/* JMA effects */
+.fx-progress{position:fixed;top:0;right:0;left:0;height:3px;z-index:1100;pointer-events:none}
+.fx-progress i{display:block;height:100%;width:100%;background:linear-gradient(90deg,#c11e40,#ff4d6d);transform-origin:right;transform:scaleX(0)}
+.fx-glow-wrap{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.fx-glow{position:absolute;left:0;top:0;width:520px;height:520px;border-radius:50%;pointer-events:none;z-index:0;background:radial-gradient(circle,rgba(193,30,64,.28),transparent 65%);transform:translate(-50%,-50%);opacity:0;transition:opacity .4s}
+.fx-host{position:relative}
+.fx-host:hover .fx-glow{opacity:1}
+.fx-host>.container{position:relative;z-index:1}
+.btn{position:relative;overflow:hidden;isolation:isolate}
+.btn::after{content:'';position:absolute;top:0;bottom:0;width:45%;left:-60%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-20deg);pointer-events:none;z-index:1}
+.btn:hover::after{animation:fx-shine .8s ease}
+@keyframes fx-shine{to{left:120%}}
+.btn-primary{transition:transform .2s,box-shadow .3s,background .2s}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(193,30,64,.4)}
+.fx-tilt{transition:transform .25s ease,box-shadow .3s,border-color .3s;transform-style:preserve-3d;will-change:transform}
+.fx-tilt:hover{border-color:rgba(193,30,64,.55)!important;box-shadow:0 18px 40px rgba(0,0,0,.25)}
+.fx-words .fx-w{display:inline-block;opacity:0;transform:translateY(.6em);filter:blur(6px);animation:fx-word .8s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:calc(var(--i)*70ms + 120ms)}
+@keyframes fx-word{to{opacity:1;transform:none;filter:none}}
+.fx-float{animation:fx-float 6s ease-in-out infinite}
+@keyframes fx-float{50%{transform:translateY(-8px)}}
+.check,.pmc-icon,.ws-ic,.ic{transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.curriculum-item:hover .check,.psc-row:hover .pmc-icon,.ws-item:hover .ws-ic,.perk:hover .ic{transform:scale(1.18) rotate(-6deg)}
+.price-tag{background:linear-gradient(90deg,#fff 0%,#fff 40%,#ff4d6d 50%,#fff 60%,#fff 100%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent!important;animation:fx-sheen 4s linear infinite}
+@keyframes fx-sheen{from{background-position:100% 0}to{background-position:-150% 0}}
+/* lead form (shared) */
+.fx-form-sec{background:radial-gradient(ellipse at 80% 20%,rgba(193,30,64,.25),transparent 50%),#0b0b0d;color:#fff}
+.fx-form-sec h2{text-align:center;margin-bottom:12px}
+.fx-form-sec .ws-sub{text-align:center;color:#948f86;max-width:620px;margin:0 auto 40px}
+.ws-form{max-width:640px;margin:0 auto;background:#151519;border:1px solid #2a2a30;padding:34px;position:relative}
+.ws-form::before{content:'';position:absolute;inset:-1px;background:linear-gradient(135deg,rgba(193,30,64,.7),transparent 40%,transparent 60%,rgba(193,30,64,.5));z-index:-1;filter:blur(14px);opacity:.5}
+.ws-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+.ws-f{display:flex;flex-direction:column;gap:7px}
+.ws-f label{font-size:13px;color:#948f86}
+.ws-f input,.ws-f select,.ws-f textarea{background:#0b0b0d;border:1px solid #2a2a30;padding:13px 14px;color:#fff;font-family:Tajawal,sans-serif;font-size:15px;border-radius:2px;width:100%;transition:border-color .2s,box-shadow .2s}
+.ws-f input:focus,.ws-f select:focus,.ws-f textarea:focus{outline:none;border-color:#c11e40;box-shadow:0 0 0 3px rgba(193,30,64,.18)}
+.ws-f textarea{min-height:90px;resize:vertical}
+.ws-alt{text-align:center;margin-top:16px;color:#948f86;font-size:14px}
+.ws-alt a{color:#fff;text-decoration:underline}
+@media(max-width:600px){.ws-row{grid-template-columns:1fr}.ws-form{padding:22px}}
+@media (prefers-reduced-motion:reduce){.fx-words .fx-w{animation:none;opacity:1;transform:none;filter:none}.price-tag{animation:none}.fx-float{animation:none}}
