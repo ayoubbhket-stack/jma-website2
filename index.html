@@ -3519,6 +3519,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- JMA-PRO-MOTION-JS-END --><script>/* JMA tracking: pushes events to Google Tag Manager */
 window.dataLayer=window.dataLayer||[];
+(function(){try{var q=new URLSearchParams(location.search),a={};['utm_source','utm_medium','utm_campaign'].forEach(function(k){if(q.get(k))a[k]=q.get(k);});if(q.get('gclid'))a.utm_source=a.utm_source||'google';if(q.get('fbclid'))a.utm_source=a.utm_source||'facebook';if(Object.keys(a).length)sessionStorage.setItem('jma_attr',JSON.stringify(a));else if(!sessionStorage.getItem('jma_attr')&&document.referrer&&document.referrer.indexOf(location.host)<0)sessionStorage.setItem('jma_attr',JSON.stringify({utm_source:new URL(document.referrer).hostname}));}catch(e){}})();
+function jmaSaveLead(d){try{var a={};try{a=JSON.parse(sessionStorage.getItem('jma_attr')||'{}');}catch(e){}var b=new URLSearchParams({name:d.name,phone:d.phone,service:d.service,message:d.message,page:location.pathname,source:a.utm_source||'direct',campaign:a.utm_campaign||'',medium:a.utm_medium||''});fetch('https://script.google.com/macros/s/AKfycbzZ7NGydpTXZmg_QG0TbpBylocwS7_Y7615oCVTJJQOnUk-iKIb-Th8Q56MrOtga9yOIA/exec',{method:'POST',mode:'no-cors',keepalive:true,body:b});}catch(e){}}
 document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.getAttribute('href')||'';
 if(h.indexOf('wa.me')>-1){dataLayer.push({event:'whatsapp_click',link_location:location.pathname});}
 else if(h.indexOf('tel:')===0){dataLayer.push({event:'phone_click',link_location:location.pathname});}});
@@ -3527,7 +3529,7 @@ var n=g('jf-name'),p=g('jf-phone').replace(/[^0-9+]/g,''),sv=g('jf-service'),m=g
 if(n.length<2){err.textContent='من فضلك اكتب اسمك';return;}
 if(!/^(\+?20|0)?1[0125][0-9]{8}$/.test(p)){err.textContent='من فضلك اكتب رقم موبايل صحيح';return;}
 err.textContent='';
-dataLayer.push({event:'generate_lead',form_name:'contact',service:sv});
+jmaSaveLead({name:n,phone:p,service:sv,message:m});dataLayer.push({event:'generate_lead',form_name:'contact',service:sv});
 var t='الاسم: '+n+'\nالرقم: '+p+'\nمحتاج: '+sv+(m?'\nتفاصيل: '+m:'');
 window.open('https://wa.me/201119916229?text='+encodeURIComponent(t),'_blank');}
 </script></body></html>
